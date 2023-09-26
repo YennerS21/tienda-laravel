@@ -4,27 +4,14 @@
   <div class="container">
     <nav class="row">
       <ul class="d-flex list-unstyled">
-        <a class="text-decoration-none" href="">
-          <li class="m-1 p-1">Ropa</li>
-        </a>
-        <a class="text-decoration-none" href="">
-          <li class="m-1 p-1">Tenis</li>
-        </a>
-        <a class="text-decoration-none" href="">
-          <li class="m-1 p-1">Comida</li>
-        </a>
-        <a class="text-decoration-none" href="">
-          <li class="m-1 p-1">Libros</li>
-        </a>
-        <a class="text-decoration-none" href="">
-          <li class="m-1 p-1">Acccesorios</li>
-        </a>
-        <a class="text-decoration-none" href="">
-          <li class="m-1 p-1">Promoción</li>
-        </a>
+        @foreach ($categorias as $categoria)
+          <a class="text-decoration-none" href="">
+            <li class="m-1 p-1">{{ $categoria->nombre }}</li>
+          </a>
+        @endforeach
       </ul>
     </nav>
-    <h4>Estas son las categorias mas visitadas</h4>
+    <h4>Estos son los prodctos mas visitados</h4>
     <div class="d-flex">
       <div class="m-3 card mb-3" style="max-width: 340px">
         <div class="row g-0">

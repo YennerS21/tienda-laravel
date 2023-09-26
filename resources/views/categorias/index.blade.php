@@ -21,8 +21,14 @@
                         <tr>
                           <th>{{ $item->id }}</th>
                           <td>{{ $item->nombre }}</td>
-                          <td><a href="">Editar</a></td>
-                          <td><a href="">Borrar</a></td>
+                          <td><a href="{{ route('categorias.edit', $item->id) }}">Editar</a></td>
+                          <td>
+                            <form action="{{ route('categorias.destroy', $item->id) }}" method="post" >
+                              @csrf
+                              @method('DELETE')
+                              <button type="submit">Eliminar</button>
+                          </form>
+                        </td>
                         </tr>
                         @endforeach
                     </tbody>
