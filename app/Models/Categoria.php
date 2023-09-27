@@ -13,4 +13,8 @@ class Categoria extends Model
     protected $fillable = [
         'name'
     ];
+    //Esto indica que una categoría puede tener muchos productos relacionados.
+    public function productos() {
+        return $this->hasMany(Producto::class);
+    }
 }
