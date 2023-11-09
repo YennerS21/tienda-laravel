@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Categoria;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -26,9 +25,5 @@ class HomeController extends Controller
     {
         return view('home');
     }
-    public function welcome()
-    {
-        $categorias = Categoria::all();
-        return view('welcome', compact('categorias'));
-    }
+
 }

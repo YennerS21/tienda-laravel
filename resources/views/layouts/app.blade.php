@@ -32,9 +32,37 @@
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav me-auto">
-
-                    </ul>
+                    @guest
+                        <ul class="d-flex list-unstyled">
+                            <li>Carrito de compras</li>
+                        </ul>
+                    @else    
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('welcome') }}">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('home') }}">Dashboard</a>
+                            </li>
+                        </ul>
+                        <ul class="navbar-nav ms-auto">
+                            <a class="text-decoration-none" href="{{ route('productos.index') }}">
+                                <li class="m-1 p-1">Productos</li>
+                            </a>
+                            <a class="text-decoration-none" href="{{ route('categorias.index') }}">
+                                <li class="m-1 p-1">Categorias</li>
+                            </a>
+                            <a class="text-decoration-none" href="">
+                                <li class="m-1 p-1">Clientes</li>
+                            </a>
+                            <a class="text-decoration-none" href="">
+                                <li class="m-1 p-1">Pedidos</li>
+                            </a>
+                            <a class="text-decoration-none" href="">
+                                <li class="m-1 p-1">Reportes</li>
+                            </a>
+                        </ul>
+                    @endguest
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ms-auto">

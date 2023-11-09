@@ -12,6 +12,9 @@ class ProductoController extends Controller
         $productos = Producto::all();
         return view('productos.index',compact('productos')); 
     }
+    public function store() {
+        return redirect()->route('productos.index');
+    }
     public function edit(Producto $producto) {
         return view('productos.edit', compact('producto'));
     }
@@ -29,7 +32,7 @@ class ProductoController extends Controller
         }else{
             return redirect()
             ->route('productos.index')
-            ->with('error','No se puede actualizar');
+            ->withErrors('error','No se puede actualizar');
         }
     }
 }

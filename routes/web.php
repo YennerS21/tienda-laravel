@@ -20,7 +20,7 @@ use App\Http\Controllers\ProductoController;
 
 Auth::routes();
 
-Route::get('/', [App\Http\Controllers\HomeController::class, 'welcome'])->name('welcome');
+Route::get('/', [App\Http\Controllers\PublicController::class, 'welcome'])->name('welcome');
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::resource('categorias', CategoriaController::class);

@@ -5,7 +5,13 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Categorias') }}</div>
+              <div class="card-header d-grid d-md-flex justify-content-md-between">
+                {{ __('Categorias') }}
+                <a class="btn-primary text-decoration-none p-2"
+                  href="{{ route('categorias.create') }}">
+                  New
+                </a>
+              </div>
 
                 <div class="card-body">
                   <table class="table">

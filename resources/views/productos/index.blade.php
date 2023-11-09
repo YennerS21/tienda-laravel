@@ -5,7 +5,13 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Productos') }}</div>
+                <div class="card-header d-grid d-md-flex justify-content-md-between">
+                  {{ __('Productos') }}
+                  <a class="btn-primary text-decoration-none p-2"
+                    href="{{ route('productos.create') }}">
+                    New
+                  </a>
+                </div>
 
                 <div class="card-body">
                   @if(session('success'))
